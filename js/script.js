@@ -13,6 +13,8 @@ new Swiper('.main-slider', {
       prevEl: '.info-slider__prev'
    },
    loop:true,
+   slidesPerView:1,
+   spaceBetween:60,
 });
 
 
@@ -23,17 +25,19 @@ new Swiper('.home-slide', {
       prevEl: '[data-prev]'
    },
    loop:true,
+   slidesPerView:1,
+   spaceBetween:60,
 });
 /* --------------------------------smSlider------------------------------- */
-// let smPrev = document.querySelectorAll('.sm-slider__prev')
-// let smNext = document.querySelectorAll('.sm-slider__next')
-// let smSliders = document.querySelectorAll('.sm-slider')
+
 new Swiper('.sm-slide', {
    navigation: {
       nextEl: '.sm-slider__next',
       prevEl: '.sm-slider__prev',
    },
    loop:true,
+   slidesPerView:1,
+   spaceBetween:60,
 });
 /* ---------------------light-slider------------------------- */
 // new Swiper('.light-slide', {
@@ -55,3 +59,20 @@ function arAni(arrow) {
    }, 900)
 }
 arAni(arrow)
+/* ------------------modal-video---------------------- */
+let opModalVideo = document.querySelectorAll('[data-open]');
+let clModalVideo = document.querySelectorAll('[data-close]');
+let modalVideo = document.querySelector('.modal-video');
+
+opModalVideo.forEach(item=>{
+   item.onclick = ()=>{
+console.log(modalVideo);
+
+      modalVideo.classList.add('show-one', 'fade')
+   }
+})
+clModalVideo.forEach(item=>{
+   item.onclick = ()=>{
+      modalVideo.classList.remove('show-one')
+   }
+})
