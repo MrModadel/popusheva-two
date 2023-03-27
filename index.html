@@ -11,7 +11,6 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
    <link rel="stylesheet" href="FontSFProDisplay/style.css">
    <link rel="stylesheet" href="FontHelveticaNeue/style.css">
-   <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
 </head>
 
 <body>
@@ -77,10 +76,12 @@
                   <p>Клубный поселок с богатой инфраструктурой для всей семьи</p>
                </div>
                <div class="main-face__arrow">
-                  <img src="./img/main-face__arrow.svg" alt="arrow">
+                  <img onclick="pageScroll()" src="./img/main-face__arrow.svg" alt="arrow">
                </div>
             </div>
          </section>
+         <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
          <section class="main-life container">
             <div class="main-life__left">
                <h3>Жизнь в Papushevo Park – это счастье в моменте!</h3>
@@ -91,7 +92,7 @@
             </div>
             <div data-open class="main-life__right">
                <img src="./img/controlVideo.png" alt="" class="main-life__right-control-video">
-               <img src="./img/main-live.png" alt="media">
+               <img src="./img/main-live.png" class="main-life__right-img" alt="media">
             </div>
          </section>
          <section class="main-slider swiper-container">
@@ -276,8 +277,14 @@
          <section class="home-slide swiper-container">
             <div class="swiper-wrapper">
                <div class="big-slider swiper-slide">
-                  <div class="big-slider__wrapper">
+                  <div class="big-slider__wrapper mb-one">
                      <div class="big-slider__left">
+                        <div class="big-slider__left-images img_disabled">
+                           <img src="./img/edelweis-sm.png" alt="edelweis-sm">
+                           <img src="./img/edem-choosing.png" alt="edem-choosing">
+                           <img src="./img/ellizey-sm.png" alt="elisey-sm">
+                           <img src="./img/elusium-sm.png" alt="elusium-sm">
+                        </div>
                         <h2>Edem</h2>
                         <p>
                            Легкий и светлый – таков настоящий Edem - рай на земле. Резиденция сочетает в себе
@@ -306,7 +313,7 @@
                            </div>
                         </div>
                         <button class="btn-second">Подробнее</button>
-                        <div class="big-slider__left-images">
+                        <div class="big-slider__left-images img_uneybled">
                            <img src="./img/edelweis-sm.png" alt="edelweis-sm">
                            <img src="./img/edem-choosing.png" alt="edem-choosing">
                            <img src="./img/ellizey-sm.png" alt="elisey-sm">
@@ -315,7 +322,17 @@
                      </div>
                      <div class="big-slider__right">
                         <div class="big-slider__right-img">
-                           <img src="./img/edem-big.png" alt="edem">
+                           <div class="sl-container-or">
+                              <div class="view view-after-or">
+                                 <img src="./img/one-sl-lighht.png" />
+                              </div>
+                              <div class="view view-before">
+                                 <img src="./img/one-sl-nighht.png" />
+                              </div>
+                              <div class="dragme-or">
+                                 <div class="dr-circle"><i class="fa fa-arrows-h" aria-hidden="true"></i></div>
+                              </div>
+                           </div>
                         </div>
                         <div class="big-slider__right-bottom">
                            <div class="big-slider__right-numbers">
@@ -335,6 +352,12 @@
                <div class="big-slider swiper-slide">
                   <div class="big-slider__wrapper">
                      <div class="big-slider__left">
+                        <div class="big-slider__left-images img_disabled">
+                           <img src="./img/edelweis-choosing.png" alt="edelweis-sm">
+                           <img src="./img/edem-sm.png" alt="edem-choosing">
+                           <img src="./img/ellizey-sm.png" alt="elisey-sm">
+                           <img src="./img/elusium-sm.png" alt="elusium-sm">
+                        </div>
                         <h2>Edelweiss</h2>
                         <p>
                            Лаконичность – это способность передать смысл несколькими словами. Именно этим путем мы пошли
@@ -366,7 +389,7 @@
                            </div>
                         </div>
                         <button class="btn-second">Подробнее</button>
-                        <div class="big-slider__left-images or-top">
+                        <div class="big-slider__left-images or-top img_uneybled">
                            <img src="./img/edelweis-choosing.png" alt="edelweis-sm">
                            <img src="./img/edem-sm.png" alt="edem-choosing">
                            <img src="./img/ellizey-sm.png" alt="elisey-sm">
@@ -375,7 +398,17 @@
                      </div>
                      <div class="big-slider__right">
                         <div class="big-slider__right-img">
-                           <img src="./img/edelweis-big.png" alt="edem">
+                           <div class="sl-container-one">
+                              <div class="view view-after-one">
+                                 <img src="./img/one-sl-lighht.png" />
+                              </div>
+                              <div class="view view-before">
+                                 <img src="./img/one-sl-nighht.png" />
+                              </div>
+                              <div class="dragme dragme-one">
+                                 <div class="dr-circle"><i class="fa fa-arrows-h" aria-hidden="true"></i></div>
+                              </div>
+                           </div>
                         </div>
                         <div class="big-slider__right-bottom">
                            <div class="big-slider__right-numbers">
@@ -392,9 +425,14 @@
                   </div>
                </div>
                <div class="big-slider swiper-slide">
-                  <div class="big-slider__wrapper">
-
+                  <div class="big-slider__wrapper mb-two">
                      <div class="big-slider__left">
+                        <div class="big-slider__left-images img_disabled">
+                           <img src="./img/edelweis-sm.png" alt="edelweis-sm">
+                           <img src="./img/edem-sm.png" alt="edem-choosing">
+                           <img src="./img/elizey-choosing.png" alt="elisey-sm">
+                           <img src="./img/elusium-sm.png" alt="elusium-sm">
+                        </div>
                         <h2>Elizey</h2>
                         <p>
                            На зеленых просторах грациозно восседает величественный дом - Elizey. С продуманными
@@ -424,7 +462,7 @@
                            </div>
                         </div>
                         <button class="btn-second">Подробнее</button>
-                        <div class="big-slider__left-images or-top-one">
+                        <div class="big-slider__left-images or-top-one img_uneybled">
                            <img src="./img/edelweis-sm.png" alt="edelweis-sm">
                            <img src="./img/edem-sm.png" alt="edem-choosing">
                            <img src="./img/elizey-choosing.png" alt="elisey-sm">
@@ -433,7 +471,17 @@
                      </div>
                      <div class="big-slider__right">
                         <div class="big-slider__right-img">
-                           <img src="./img/elizey-big.png" alt="edem">
+                           <div class="sl-container-two">
+                              <div class="view view-after-two">
+                                 <img src="./img/one-sl-lighht.png" />
+                              </div>
+                              <div class="view view-before">
+                                 <img src="./img/one-sl-nighht.png" />
+                              </div>
+                              <div class="dragme-two">
+                                 <div class="dr-circle"><i class="fa fa-arrows-h" aria-hidden="true"></i></div>
+                              </div>
+                           </div>
                         </div>
                         <div class="big-slider__right-bottom">
                            <div class="big-slider__right-numbers">
@@ -450,8 +498,14 @@
                   </div>
                </div>
                <div class="big-slider swiper-slide">
-                  <div class="big-slider__wrapper">
+                  <div class="big-slider__wrapper mb-tre">
                      <div class="big-slider__left">
+                        <div class="big-slider__left-images img_disabled">
+                           <img src="./img/edelweis-sm.png" alt="edelweis-sm">
+                           <img src="./img/edem-sm.png" alt="edem-choosing">
+                           <img src="./img/ellizey-sm.png" alt="elisey-sm">
+                           <img src="./img/elusium-sm.png" class="elusium-sm" alt="elusium-sm">
+                        </div>
                         <h2>Elusium</h2>
                         <p>Архитектура резиденции Elysium представляет из себя уникальное сочетание современности.</p>
                         <div class="big-slider__left-info">
@@ -477,7 +531,7 @@
                            </div>
                         </div>
                         <button class="btn-second">Подробнее</button>
-                        <div class="big-slider__left-images or-top-one">
+                        <div class="big-slider__left-images or-top-one img_uneybled">
                            <img src="./img/edelweis-sm.png" alt="edelweis-sm">
                            <img src="./img/edem-sm.png" alt="edem-choosing">
                            <img src="./img/ellizey-sm.png" alt="elisey-sm">
@@ -486,7 +540,17 @@
                      </div>
                      <div class="big-slider__right">
                         <div class="big-slider__right-img">
-                           <img src="./img/elisium-big.png" alt="edem">
+                           <div class="sl-container-tre">
+                              <div class="view view-after-tre">
+                                 <img src="./img/one-sl-lighht.png" />
+                              </div>
+                              <div class="view view-before">
+                                 <img src="./img/one-sl-nighht.png" />
+                              </div>
+                              <div class="dragme-tre">
+                                 <div class="dr-circle"><i class="fa fa-arrows-h" aria-hidden="true"></i></div>
+                              </div>
+                           </div>
                         </div>
                         <div class="big-slider__right-bottom">
                            <div class="big-slider__right-numbers">
@@ -707,7 +771,6 @@
                         </div>
                      </div>
                   </div>
-
                </div>
             </div>
          </section>
@@ -832,7 +895,7 @@
             <div class="modal-video__content">
                <form action="#">
                   <div data-close class="modal-video__close">&times;</div>
-                  <video id="myvideo" src="#" width="100%" height="400px" controls >
+                  <video id="myvideo" src="#" width="100%" height="400px" controls>
                      <source src="#" type="">
                   </video>
                </form>
@@ -840,9 +903,13 @@
          </div>
       </div>
    </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+   <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+   <div class="elfsight-app-9e07dab0-1015-4209-b081-75e39fbe4e57"></div> -->
+   <script src="js/scroll.js"></script>
    <script src="./js/script.js"></script>
-
 </body>
 
 </html>

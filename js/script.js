@@ -26,7 +26,8 @@ new Swiper('.home-slide', {
    },
    loop: true,
    slidesPerView: 1,
-   spaceBetween: 60,
+   spaceBetween: 160,
+   autoHeight: true,
 });
 /* --------------------------------smSlider------------------------------- */
 
@@ -75,3 +76,10 @@ clModalVideo.forEach(item => {
       modalVideo.classList.remove('show-one')
    }
 })
+function pageScroll() {
+   window.scrollTo({
+      top:795,
+      behavior:"smooth",
+   });
+}
+
