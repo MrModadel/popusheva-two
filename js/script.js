@@ -28,6 +28,7 @@ new Swiper('.home-slide', {
    slidesPerView: 1,
    spaceBetween: 160,
    autoHeight: true,
+   simulateTouch:false,
 });
 /* --------------------------------smSlider------------------------------- */
 
