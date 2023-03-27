@@ -123,7 +123,7 @@ h6 {
       padding: 98px 0 0 0;
       width: 100%;
       background-image: url(https://papushevo.ru/wp-content/themes/Papushevo/img/Cover.png);
-      background-position: center;
+      background-position: center bottom;
       background-repeat: no-repeat;
       background-size: cover;
    }
@@ -168,6 +168,7 @@ h6 {
    &__arrow {
       text-align: center;
       margin-top: 325px;
+      transition: 0.9s ease;
    }
 }
 
@@ -228,11 +229,12 @@ h6 {
 //    background-color: rgba(172, 140, 90, 1);
 // }
 .info-slider {
-   display: flex;
-   max-width: 1440px;
-   margin: 0 auto;
-   margin-top: 115px;
-
+   &__wrapper {
+      display: flex;
+      max-width: 1440px;
+      margin: 0 auto;
+      margin-top: 115px;
+   }
    &__left {
       position: relative;
       width: 54%;
@@ -469,13 +471,14 @@ h6 {
 }
 
 .big-slider {
-   max-width: 1440px;
-   margin: 0 auto;
-   display: flex;
-   margin-top: 100px;
-   justify-content: center;
-   height: 700px;
-
+   &__wrapper {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      margin-top: 100px;
+      justify-content: center;
+      height: 700px;
+   }
    &__left {
       height: 700px;
       padding: 58px;
@@ -638,18 +641,21 @@ h6 {
 }
 
 .sm-slider {
-   position: relative;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-image: url("../img/sm-slider-bg.png");
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
-   border-radius: 0px 40px;
-   margin-top: 100px;
-   height: 200px;
-   margin-bottom: 100px;
+   &__wrapper {
+      position: relative;
+      background-image: url("../img/sm-slider-bg.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 0px 40px;
+      height: 200px;
+      max-width: 1202px;
+      margin: 100px auto;
+      padding: 0 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
 
    &__title {
       display: flex;
@@ -684,21 +690,26 @@ h6 {
    }
 }
 
-.light-sider {
-   max-width: 1440px;
+.light-slider {
+   width: 100% !important;
    margin: 0 auto;
-   background-image: url("../img/light-slider-left.png");
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
-   display: flex;
-   align-items: center;
-   padding: 50px;
-   height: 800px;
-   margin-bottom: 100px;
-   position: relative;
-   border-radius: 0px 60px 0px 0px;
 
+   &__wrapper {
+      max-width: 1440px !important;
+      margin: 0 auto;   
+      background-image: url("../img/light-slider-left.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      height: 800px;
+      margin-bottom: 100px;
+      position: relative;
+      border-radius: 0px 60px 0px 0px;
+   }
    &__left {
       h2 {
          font-family: "Oranienbaum";
@@ -747,7 +758,7 @@ h6 {
             align-items: center;
             gap: 30px;
             opacity: 0.8;
-            margin-bottom: 1px;
+            margin-bottom: 2px;
          }
       }
    }
@@ -979,7 +990,7 @@ h6 {
    &__top {
       display: flex;
       align-items: center;
-      padding-left: 70px;
+      justify-content: space-between;
 
       &-nav {
          margin-left: 100px;
@@ -1022,7 +1033,8 @@ h6 {
 
    &__bottom {
       display: flex;
-      padding-left: 70px;
+      justify-content: space-between;
+      align-items: center;
       margin-top: 40px;
 
       &-logo {
