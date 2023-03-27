@@ -12,9 +12,9 @@ new Swiper('.main-slider', {
       nextEl: '.info-slider__next',
       prevEl: '.info-slider__prev'
    },
-   loop:true,
-   slidesPerView:1,
-   spaceBetween:60,
+   loop: true,
+   slidesPerView: 1,
+   spaceBetween: 60,
 });
 
 
@@ -24,9 +24,9 @@ new Swiper('.home-slide', {
       nextEl: '[data-next]',
       prevEl: '[data-prev]'
    },
-   loop:true,
-   slidesPerView:1,
-   spaceBetween:60,
+   loop: true,
+   slidesPerView: 1,
+   spaceBetween: 60,
 });
 /* --------------------------------smSlider------------------------------- */
 
@@ -35,9 +35,9 @@ new Swiper('.sm-slide', {
       nextEl: '.sm-slider__next',
       prevEl: '.sm-slider__prev',
    },
-   loop:true,
-   slidesPerView:1,
-   spaceBetween:60,
+   loop: true,
+   slidesPerView: 1,
+   spaceBetween: 60,
 });
 /* ---------------------light-slider------------------------- */
 // new Swiper('.light-slide', {
@@ -64,15 +64,14 @@ let opModalVideo = document.querySelectorAll('[data-open]');
 let clModalVideo = document.querySelectorAll('[data-close]');
 let modalVideo = document.querySelector('.modal-video');
 
-opModalVideo.forEach(item=>{
-   item.onclick = ()=>{
-console.log(modalVideo);
-
+opModalVideo.forEach(item => {
+   item.onclick = () => {
+      console.log(modalVideo);
       modalVideo.classList.add('show-one', 'fade')
    }
 })
-clModalVideo.forEach(item=>{
-   item.onclick = ()=>{
+clModalVideo.forEach(item => {
+   item.onclick = () => {
       modalVideo.classList.remove('show-one')
    }
 })
